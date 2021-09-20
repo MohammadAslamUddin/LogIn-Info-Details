@@ -10,7 +10,7 @@ namespace LogInInfoDetails.Gateway
         public SqlConnection Connection { get; set; }
         public SqlDataReader Reader { get; set; }
         public int RowAffected { get; set; }
-        private string connectionString = WebConfigurationManager.ConnectionStrings[""].ConnectionString;
+        private string connectionString = WebConfigurationManager.ConnectionStrings["LogInDB"].ConnectionString;
 
         public CommonGateway()
         {
