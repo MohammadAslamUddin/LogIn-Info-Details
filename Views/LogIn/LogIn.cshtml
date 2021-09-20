@@ -1,0 +1,41 @@
+﻿@model LogInInfoDetails.Models.AppUser
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>LogIn</title>
+</head>
+<body>
+<div class="container container-fluid">
+    @using (Html.BeginForm("LogIn","LogIn",FormMethod.Post))
+    {
+        <table class="table table-borderless">
+            <tr>
+                <td>@Html.LabelFor(l=>l.Email)</td>
+                <td>@Html.TextBoxFor(t=>t.Email)</td>
+                <td>@Html.ValidationMessageFor(v=>v.Email)</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(l=>l.Password)</td>
+                <td>@Html.PasswordFor(t=>t.Password)</td>
+                <td>@Html.ValidationMessageFor(v=>v.Password)</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(l=>l.ControllerId)</td>
+                <td>@Html.TextBoxFor(t=>t.ControllerId)</td>
+                <td>@Html.ValidationMessageFor(v=>v.ControllerId)</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="align-content-center"><input type="submit" value="LogIn"/></td>
+            </tr>
+        </table>
+    }
+</div>
+</body>
+</html>
