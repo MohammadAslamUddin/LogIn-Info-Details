@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogAuthSystem", "..\LogAuthSystem\LogAuthSystem.csproj", "{DC7CF37E-0247-4D1E-989B-C880F7D84DF0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthSystem", "AuthSystem\AuthSystem.csproj", "{838A8C0A-CCC5-4563-9838-AC1FC08E6115}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{DC7CF37E-0247-4D1E-989B-C880F7D84DF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC7CF37E-0247-4D1E-989B-C880F7D84DF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DC7CF37E-0247-4D1E-989B-C880F7D84DF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{838A8C0A-CCC5-4563-9838-AC1FC08E6115}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{838A8C0A-CCC5-4563-9838-AC1FC08E6115}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{838A8C0A-CCC5-4563-9838-AC1FC08E6115}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{838A8C0A-CCC5-4563-9838-AC1FC08E6115}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
