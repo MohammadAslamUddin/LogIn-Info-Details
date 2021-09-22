@@ -1,4 +1,5 @@
-﻿using AuthSystem.Models;
+﻿using AuthSystem.Manager;
+using AuthSystem.Models;
 using Microsoft.AspNet.Identity.Owin;
 using System.Linq;
 using System.Threading.Tasks;
@@ -12,9 +13,11 @@ namespace AuthSystem.Controllers
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
+        private AccountManager accountManager;
 
         public AccountController()
         {
+            accountManager = new AccountManager();
         }
 
         public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager)
@@ -52,6 +55,7 @@ namespace AuthSystem.Controllers
         [AllowAnonymous]
         public ActionResult Login(string returnUrl)
         {
+            ViewBag.list = accountManager.lists();
             ViewBag.ReturnUrl = returnUrl;
             return View();
         }
