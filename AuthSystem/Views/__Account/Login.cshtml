@@ -1,0 +1,59 @@
+﻿@using System.Web.UI.WebControls
+@using AuthSystem.Models
+@model LoginViewModel
+@*@{
+    ViewBag.Title = "Log in";
+}*@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>How To Create Simple Login Form Design In Bootstrap 5</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://www.markuptag.com/bootstrap/5/css/bootstrap.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 offset-md-4">
+                <div class="login-form bg-light mt-4 p-4">
+                    @using (Html.BeginForm("Login", "Account", new {ReturnUrl = ViewBag.ReturnUrl}, FormMethod.Post, new {@class = "row g-3", role = "form"}))
+                    {
+
+                     <h4>Welcome Back</h4>
+                        <div class="col-12">
+                            @Html.LabelFor(m => m.Email, new { @class = "col-md-2"})
+                            @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder="Email" })
+                            @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                        </div>
+                    <div class="col-12">
+                        @Html.LabelFor(m => m.Password, new { @class = "col-md-2" })
+                        @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Password" })
+                        @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="col-12">
+                        <div class="form-check">
+                            @Html.CheckBoxFor(m => m.RememberMe)
+                            @Html.LabelFor(m => m.RememberMe)
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-dark float-end">Login</button>
+                    </div>
+                    }
+                    <hr class="mt-4">
+                    <div class="col-12">
+                        <p class="text-center mb-0">Have not account yet?  @Html.ActionLink("Signp", "Register")</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+</body>
+</html>

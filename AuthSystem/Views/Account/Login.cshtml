@@ -1,9 +1,8 @@
-﻿@using System.Web.UI.WebControls
-@using AuthSystem.Models
-@model LoginViewModel
-@*@{
-    ViewBag.Title = "Log in";
-}*@
+﻿@model AuthSystem.Models.LoginViewModel
+
+@{
+    Layout = null;
+}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -19,30 +18,30 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4 offset-md-4">
-                <div class="login-form bg-light mt-4 p-4">
-                    @using (Html.BeginForm("Login", "Account", new {ReturnUrl = ViewBag.ReturnUrl}, FormMethod.Post, new {@class = "row g-3", role = "form"}))
+                <div class="bg-light mt-4 p-4">
+                    @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "row g-3", role = "form" }))
                     {
 
-                     <h4>Welcome Back</h4>
+                        <h4>Welcome Back</h4>
                         <div class="col-12">
-                            @Html.LabelFor(m => m.Email, new { @class = "col-md-2"})
-                            @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder="Email" })
+                            @Html.LabelFor(m => m.Email, new { @class = "col-md-2" })
+                            @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Email" })
                             @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
                         </div>
-                    <div class="col-12">
-                        @Html.LabelFor(m => m.Password, new { @class = "col-md-2" })
-                        @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Password" })
-                        @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
-                    </div>
-                    <div class="col-12">
-                        <div class="form-check">
-                            @Html.CheckBoxFor(m => m.RememberMe)
-                            @Html.LabelFor(m => m.RememberMe)
+                        <div class="col-12">
+                            @Html.LabelFor(m => m.Password, new { @class = "col-md-2" })
+                            @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Password" })
+                            @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
                         </div>
-                    </div>
-                    <div class="col-12">
-                        <button type="submit" class="btn btn-dark float-end">Login</button>
-                    </div>
+                        <div class="col-12">
+                            <div class="form-check">
+                                @Html.CheckBoxFor(m => m.RememberMe)
+                                @Html.LabelFor(m => m.RememberMe)
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-dark float-end">Login</button>
+                        </div>
                     }
                     <hr class="mt-4">
                     <div class="col-12">
@@ -52,8 +51,8 @@
             </div>
         </div>
     </div>
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }
 </body>
 </html>
