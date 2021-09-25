@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogAuthSystem", "..\LogAuth
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthSystem", "AuthSystem\AuthSystem.csproj", "{838A8C0A-CCC5-4563-9838-AC1FC08E6115}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Log", "Log\Log.csproj", "{DE262DA7-42CB-47B1-ADB3-69B58ACFBD07}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{838A8C0A-CCC5-4563-9838-AC1FC08E6115}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{838A8C0A-CCC5-4563-9838-AC1FC08E6115}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{838A8C0A-CCC5-4563-9838-AC1FC08E6115}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE262DA7-42CB-47B1-ADB3-69B58ACFBD07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE262DA7-42CB-47B1-ADB3-69B58ACFBD07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE262DA7-42CB-47B1-ADB3-69B58ACFBD07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE262DA7-42CB-47B1-ADB3-69B58ACFBD07}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
